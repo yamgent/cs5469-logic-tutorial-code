@@ -32,7 +32,7 @@ for a composite formula.
 Each single character should be a legal keyword (no spaces allowed).
 The usable keywords are as follows:
 
-* Composite formula name: `a, b, c, ..., Z`
+* Composite formula name: `a, b, c, ..., z`
 * Propositions (pnames):` 0, 1, 2, ..., 9`
 (note that `0` refers to `p_0`, `1` refers to `p_1`, etc)
 * Unary connectives: `~` (neg)
