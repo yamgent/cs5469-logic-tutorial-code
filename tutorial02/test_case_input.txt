@@ -1,0 +1,50 @@
+mode def
+a=1
+b=2
+c=(~a)
+mode eval
+0
+1
+mode def
+c=(a^b)
+mode eval
+00
+01
+10
+11
+mode def
+c=(aVb)
+mode eval
+00
+01
+10
+11
+mode def
+c=(a>b)
+mode eval
+00
+01
+10
+11
+mode def
+c=(a-b)
+mode eval
+00
+01
+10
+11
+mode def
+c=((~a)^(~b))
+mode eval
+00
+01
+10
+11
+mode def
+c=(~(aVb))
+mode eval
+00
+01
+10
+11
+mode end
