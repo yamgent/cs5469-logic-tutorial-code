@@ -1,0 +1,8 @@
+--------------------
+Expression: ((~(AvB))^C)
+WELL-FORMED
+--------------------
+Expression: ((~A)>BvC)
+Error: Expected ")" at 7
+Error: There were some syntax errors
+MALFORMED

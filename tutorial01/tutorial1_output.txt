@@ -1,0 +1,37 @@
+--------------------
+Expression: ((~(AvB))^C)
+WELL-FORMED
+--------------------
+Expression: (A^B)vC
+Error: Additional token after 5
+MALFORMED
+--------------------
+Expression: A>(B^C)
+Error: Additional token after 1
+MALFORMED
+--------------------
+Expression: ((A-B)>(~A))
+WELL-FORMED
+--------------------
+Expression: ((~A)>BvC)
+Error: Expected ")" at 7
+Error: There were some syntax errors
+MALFORMED
+--------------------
+Expression: (((CvB^A)-D)
+Error: Expected ")" at 6
+Error: Expected formula at 2
+Error: Expected formula at 1
+Error: There were some syntax errors
+MALFORMED
+--------------------
+Expression: ((vA)^(~B))
+Error: Unexpected token "v" at 2
+Error: Expected formula at 2
+Error: Expected formula at 1
+Error: There were some syntax errors
+MALFORMED
+--------------------
+Expression: (A^(B^C)))
+Error: Additional token after 9
+MALFORMED
