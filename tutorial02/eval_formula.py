@@ -1,6 +1,6 @@
 # author: Tan Wang Leng
-
-# see commentary.txt for description of this program
+#
+# see README.md for description of this program
 import sys
 
 
