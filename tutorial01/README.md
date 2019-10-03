@@ -10,6 +10,8 @@ To run the program:
 python3 well_formed_formula.py
 ```
 
+and enter your input accordingly.
+
 ## Input
 
 Each line in the input should be an expression that
@@ -29,7 +31,11 @@ For example, the following input:
 ((~A)>BvC)
 ```
 
-Will produce the following output:
+Which is equivalent of saying:
+
+![example_input](example_input.png)
+
+And will produce the following output:
 
 ```
 --------------------

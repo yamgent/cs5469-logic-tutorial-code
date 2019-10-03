@@ -69,6 +69,8 @@ formula is generated and stored in the program's memory, which will be
 used by the program to get answers during evaluation mode
 (by calling `ast.evaluate(defined_cforms, truth_assignment)`).
 
+We allow re-definition of formulas for convenience reasons.
+
 ## Evaluation Mode (`mode eval`)
 
 In evaulation mode, a single line contains all of the truth
@@ -94,10 +96,10 @@ error may be thrown for those (see callers of
 
 #### Implementation Description
 
-As mentioned earlier, the AST's `evaluate()` method will be used
-to give the answer, which will traverse down the tree until we
-hit `AstPname`, which we can use the truth assignment to derive
-an answer, and propagate it up the tree by applying the operators.
+As mentioned earlier, the AST's `evaluate(defined_cforms, truth_assignment)` 
+method will be used to will traverse down the tree, until we hit `AstPname`
+nodes, which we can use the truth assignment to derive an answer, and
+propagate it up the tree by applying the operators accordingly.
 
 ## Example Input & Output
 
@@ -116,7 +118,11 @@ mode eval
 mode end
 ```
 
-The following is the output:
+Which is equivalent of saying:
+
+![example_input](example_input.png)
+
+And the following is the output:
 
 ```
 Answer (line 6): True
@@ -129,7 +135,6 @@ Each truth assignment given in `mode eval` is evaluated
 using the formula `c=((~a)Vb)`. For Line 6, 
 `a=0` and `b=0`, so this evaluates to `True`. Only Line 8 gives
 you a `False`, as `a=1` and `b=0` will result in `c=0`.
-
 
 ## Future Work
 
